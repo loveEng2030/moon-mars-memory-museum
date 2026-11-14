@@ -893,6 +893,18 @@
     padding: 7px 6% 12px;
   }
 
+  .mobile-nav-scrim {
+    position: fixed !important;
+    z-index: 4;
+    inset: 68px 0 0;
+    width: 100vw;
+    height: calc(100svh - 68px);
+    border: 0;
+    border-radius: 0;
+    background: oklch(0.08 0.008 55 / 76%) !important;
+    backdrop-filter: blur(2px);
+  }
+
   .mobile-nav a {
     min-height: 46px;
     display: flex;

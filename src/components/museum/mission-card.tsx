@@ -5,8 +5,10 @@ import type { museumMissions } from "@/lib/museum-missions";
 type MuseumMission = (typeof museumMissions)[number];
 
 export function MissionCard({ mission }: { mission: MuseumMission }) {
+  const sectionId = mission.id === "lunar-roving-vehicle" ? "moon" : mission.id === "sojourner" ? "mars" : mission.id;
+
   return (
-    <article className="mission-card" id={mission.id}>
+    <article className="mission-card" id={sectionId}>
       <a className="mission-image-link" href={mission.imageSource} target="_blank" rel="noreferrer">
         <img className="mission-image" src={mission.image} alt={mission.imageAlt} loading="lazy" />
         <span className="mission-image-arrow" aria-hidden="true">

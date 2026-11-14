@@ -1,8 +1,8 @@
 import apolloImage from "@/assets/nasa-apollo-15-roving-vehicle.jpg.asset.json";
-import insightImage from "@/assets/nasa-insight-seismometer-deployment.jpg.asset.json";
+import insightImage from "@/assets/nasa-insight-self-portrait.jpg.asset.json";
 import sojournerImage from "@/assets/nasa-mars-pathfinder-sojourner.jpg.asset.json";
 import opportunityImage from "@/assets/nasa-opportunity-self-portrait.jpg.asset.json";
-import spiritImage from "@/assets/nasa-spirit-husband-hill.jpg.asset.json";
+import spiritImage from "@/assets/nasa-spirit-self-portrait.jpg.asset.json";
 
 export const museumMissions = [
   {
@@ -10,7 +10,7 @@ export const museumMissions = [
     name: "Lunar Roving Vehicle",
     mission: "Apollo 15",
     world: "MOON",
-    dateLine: "First lunar drive · 31 July 1971",
+    dateLine: "Apollo LRV · first lunar drive 31 July 1971",
     image: apolloImage.url,
     imageAlt: "Apollo 15 Lunar Roving Vehicle on the lunar surface",
     imageCredit: "NASA / Apollo 15",
@@ -25,7 +25,7 @@ export const museumMissions = [
     name: "Sojourner",
     mission: "Mars Pathfinder",
     world: "MARS",
-    dateLine: "Launched 1996 · landed 04 July 1997",
+    dateLine: "Launched 04 December 1996 · landed 04 July 1997",
     image: sojournerImage.url,
     imageAlt: "NASA's Sojourner rover on the surface of Mars",
     imageCredit: "NASA / JPL",
@@ -57,9 +57,9 @@ export const museumMissions = [
     world: "MARS",
     dateLine: "Launched 10 June 2003 · landed 03 January 2004",
     image: spiritImage.url,
-    imageAlt: "The view from Spirit's summit on Husband Hill, Mars",
+    imageAlt: "NASA Mars Exploration Rover Spirit's self-portrait",
     imageCredit: "NASA / JPL-Caltech / Cornell",
-    imageSource: "https://science.nasa.gov/mission/mer-spirit/",
+    imageSource: "https://www.nasa.gov/image-article/spirits-self-portrait/",
     summary:
       "Opportunity's twin rover uncovered strong evidence that Mars was once much wetter than it is today.",
     source: "https://science.nasa.gov/mission/mer-spirit/",
@@ -72,9 +72,9 @@ export const museumMissions = [
     world: "MARS",
     dateLine: "Launched 05 May 2018 · landed 26 November 2018",
     image: insightImage.url,
-    imageAlt: "InSight's camera view as it deploys a seismometer on Mars",
+    imageAlt: "NASA InSight's first self-portrait, showing its deck and solar panels on Mars",
     imageCredit: "NASA / JPL-Caltech",
-    imageSource: "https://science.nasa.gov/mission/insight/",
+    imageSource: "https://science.nasa.gov/resource/insights-first-selfie/",
     summary:
       "A stationary lander that investigated Mars' deep interior using instruments placed on the surface.",
     source: "https://science.nasa.gov/mission/insight/",

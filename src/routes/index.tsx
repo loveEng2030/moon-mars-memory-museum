@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main>
-      <section className="museum-hero" aria-labelledby="hero-title">
+      <section className="museum-hero" id="top" aria-labelledby="hero-title">
         <img
           className="hero-photograph"
           src={lunarRoverHero.url}
@@ -149,13 +149,13 @@ function Index() {
           <a className="world-link world-moon" href="#moon">
             <span className="world-index">01 / LUNAR SURFACE</span>
             <span className="world-name">The Moon</span>
-            <span className="world-footnote">One Apollo rover · first drive 1971</span>
+            <span className="world-footnote">Apollo LRV · first drive 1971</span>
             <span className="world-arrow" aria-hidden="true"><ArrowUpRight /></span>
           </a>
           <a className="world-link world-mars" href="#mars">
             <span className="world-index">02 / MARTIAN SURFACE</span>
             <span className="world-name">Mars</span>
-            <span className="world-footnote">Four landers and rovers · 1997–2018</span>
+            <span className="world-footnote">Four machines profiled · 1997–2018</span>
             <span className="world-arrow" aria-hidden="true"><ArrowUpRight /></span>
           </a>
         </div>

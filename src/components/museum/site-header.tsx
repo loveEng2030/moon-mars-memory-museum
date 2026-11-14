@@ -56,16 +56,24 @@ export function SiteHeader() {
       </div>
 
       {menuOpen && (
-        <nav className="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">
-          <Link to="/" onClick={() => setMenuOpen(false)}>
-            Home
-          </Link>
-          {destinations.map((destination) => (
-            <a key={destination.href} href={destination.href} onClick={() => setMenuOpen(false)}>
-              {destination.label}
-            </a>
-          ))}
-        </nav>
+        <>
+          <Button
+            className="mobile-nav-scrim"
+            variant="ghost"
+            aria-label="Close navigation"
+            onClick={() => setMenuOpen(false)}
+          />
+          <nav className="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+            {destinations.map((destination) => (
+              <a key={destination.href} href={destination.href} onClick={() => setMenuOpen(false)}>
+                {destination.label}
+              </a>
+            ))}
+          </nav>
+        </>
       )}
     </header>
   );
