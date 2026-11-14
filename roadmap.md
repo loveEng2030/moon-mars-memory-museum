@@ -1,1 +1,3 @@
-- [ ] Rework the SPACE LEGACY homepage to follow the uploaded HTML visual reference and implement Phase 1 navigation, map-preview, timeline, quiz, and AI-ready sections.
+- [x] Implement Phase 1 navigation, Moon/Mars archive selector, mission timeline, quiz and AI-ready sections in the SPACE LEGACY homepage.
+- [x] Verify mission sources, desktop/mobile navigation, phone/tablet layout, all NASA photos, and the unavailable-state labels for future tools.
+- [ ] Revisit the exact HTML visual reference when `index-1.html` is available; it was not present in the workspace, so Phase 1 follows the written style brief.
