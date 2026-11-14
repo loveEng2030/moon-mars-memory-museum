@@ -1,26 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Orbit, RadioTower } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { MissionCard } from "@/components/museum/mission-card";
 import { SiteHeader } from "@/components/museum/site-header";
+import {
+  HistorianPreviewSection,
+  MissionTimelineSection,
+  ModelBaySection,
+  QuizPreviewSection,
+  SpaceMapSection,
+} from "@/components/museum/homepage-sections";
 import lunarRoverHero from "@/assets/nasa-apollo-15-lunar-rover-hero.jpg.asset.json";
 import { museumMissions } from "@/lib/museum-missions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SPACE LEGACY — The machines we left behind" },
+      { title: "SPACE LEGACY — Abandoned but Not Forgotten" },
       {
         name: "description",
         content:
-          "An interactive digital museum of the machines that explored the Moon and Mars. Discover NASA mission histories, archival photographs, and the work these explorers left behind.",
+          "An independent educational digital museum preserving the stories of NASA exploration equipment left on the Moon and Mars.",
       },
-      { property: "og:title", content: "SPACE LEGACY — The machines we left behind" },
+      { property: "og:title", content: "SPACE LEGACY — Abandoned but Not Forgotten" },
       {
         property: "og:description",
         content:
-          "Explore the legacy of human exploration across the Moon and Mars through NASA mission histories and archival photographs.",
+          "Explore the machines humanity left on the Moon and Mars through cited NASA mission records and archival photographs.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -40,30 +47,32 @@ function Index() {
           fetchPriority="high"
         />
         <div className="hero-image-shade" aria-hidden="true" />
+        <div className="starfield-layer" aria-hidden="true" />
+        <div className="solar-horizon" aria-hidden="true" />
         <SiteHeader />
 
         <div className="hero-content">
           <p className="eyebrow hero-eyebrow">
-            <span className="eyebrow-rule" /> A digital museum of planetary exploration
+            <span className="eyebrow-rule" /> INDEPENDENT MUSEUM / NOT AFFILIATED WITH NASA
           </p>
           <h1 id="hero-title" className="hero-title">
-            <span>THE MACHINES</span>
-            <span>WE LEFT</span>
-            <span>BEHIND.</span>
+            <span>EVERY MISSION</span>
+            <span>LEAVES A</span>
+            <span>LEGACY.</span>
           </h1>
           <p className="hero-description">
-            Explore the legacy of human exploration across the Moon and Mars. Discover the machines
-            that went farther than we could, and the stories they left behind.
+            Explore the machines humanity left behind on the Moon and Mars. Discover their missions,
+            stories, discoveries, and the legacy they created.
           </p>
           <div className="hero-actions">
             <Button asChild variant="hero" size="lg">
-              <a href="#moon">
-                Explore the Moon <ArrowRight aria-hidden="true" />
+              <a href="#space-map">
+                EXPLORE THE MUSEUM <ArrowRight aria-hidden="true" />
               </a>
             </Button>
             <Button asChild variant="heroOutline" size="lg">
-              <a href="#mars">
-                Explore Mars <ArrowRight aria-hidden="true" />
+              <a href="#missions">
+                DISCOVER THE MISSIONS <ArrowRight aria-hidden="true" />
               </a>
             </Button>
           </div>
@@ -76,8 +85,8 @@ function Index() {
             target="_blank"
             rel="noreferrer"
           >
-            <span>01 / THE MOON</span>
-            NASA · Apollo 15 · Lunar Roving Vehicle <ArrowUpRight aria-hidden="true" />
+            <span>INDEPENDENT EDUCATIONAL PROJECT</span>
+            Apollo 15 Lunar Roving Vehicle · NASA image archive <ArrowUpRight aria-hidden="true" />
           </a>
           <a className="scroll-cue" href="#missions">
             ENTER THE ARCHIVE <ArrowDownRight aria-hidden="true" />
@@ -136,50 +145,11 @@ function Index() {
         </div>
       </section>
 
-      <section className="worlds-section content-wrap" aria-labelledby="worlds-title">
-        <div className="section-heading worlds-heading">
-          <div>
-            <p className="eyebrow"><span className="eyebrow-rule" /> TWO WORLDS / ONE ARCHIVE</p>
-            <h2 id="worlds-title">Choose a world.</h2>
-          </div>
-          <p className="section-intro-copy">Follow the surface record, one machine at a time.</p>
-        </div>
-
-        <div className="world-links">
-          <a className="world-link world-moon" href="#moon">
-            <span className="world-index">01 / LUNAR SURFACE</span>
-            <span className="world-name">The Moon</span>
-            <span className="world-footnote">Apollo LRV · first drive 1971</span>
-            <span className="world-arrow" aria-hidden="true"><ArrowUpRight /></span>
-          </a>
-          <a className="world-link world-mars" href="#mars">
-            <span className="world-index">02 / MARTIAN SURFACE</span>
-            <span className="world-name">Mars</span>
-            <span className="world-footnote">Four machines profiled · 1997–2018</span>
-            <span className="world-arrow" aria-hidden="true"><ArrowUpRight /></span>
-          </a>
-        </div>
-      </section>
-
-      <section className="explorer-section" id="explorer" aria-labelledby="explorer-title">
-        <div className="content-wrap explorer-layout">
-          <div className="explorer-emblem" aria-hidden="true"><Orbit /></div>
-          <div className="explorer-copy">
-            <p className="eyebrow"><span className="eyebrow-rule" /> THE COLLECTION / IN PROGRESS</p>
-            <h2 id="explorer-title">A closer look is coming.</h2>
-            <p>
-              A 3D collection, interactive surface maps, and a machine-by-machine archive are planned
-              for a later edition. This space will open when verified models and source material are
-              ready.
-            </p>
-          </div>
-          <div className="explorer-status">
-            <RadioTower aria-hidden="true" />
-            <span>3D MODEL VIEWER</span>
-            <span>NOT YET AVAILABLE</span>
-          </div>
-        </div>
-      </section>
+      <SpaceMapSection />
+      <ModelBaySection />
+      <MissionTimelineSection />
+      <QuizPreviewSection />
+      <HistorianPreviewSection />
 
       <footer className="museum-footer" id="about">
         <div className="content-wrap footer-inner">
@@ -187,7 +157,11 @@ function Index() {
             <span className="brand-mark" aria-hidden="true"><span /><span /><span /><span /></span>
             <span className="brand-name"><span>SPACE</span><span>LEGACY</span></span>
           </a>
-          <p>HISTORICAL PHOTOGRAPHS & MISSION SOURCES · NASA / JPL</p>
+          <div className="footer-project-credit">
+            <strong>Abandoned but Not Forgotten.</strong>
+            <p>AN INDEPENDENT EDUCATIONAL PROJECT · NOT AFFILIATED WITH NASA</p>
+            <p>NASA / JPL DATA & IMAGE SOURCES · TEAM COSMIC · PROJECT CREDITS</p>
+          </div>
           <a className="back-to-top" href="#top">BACK TO THE SURFACE <ArrowUpRight aria-hidden="true" /></a>
         </div>
       </footer>

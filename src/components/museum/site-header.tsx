@@ -5,11 +5,12 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const destinations = [
-  { label: "Explore Moon", href: "#moon" },
-  { label: "Explore Mars", href: "#mars" },
+  { label: "Space Map", href: "#space-map" },
   { label: "Missions", href: "#missions" },
   { label: "3D Explorer", href: "#explorer" },
-  { label: "About", href: "#about" },
+  { label: "Timeline", href: "#timeline" },
+  { label: "Space Quiz", href: "#space-quiz" },
+  { label: "AI Historian", href: "#ai-historian" },
 ];
 
 export function SiteHeader() {

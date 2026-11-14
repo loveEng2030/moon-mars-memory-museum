@@ -1,0 +1,1 @@
+- [ ] Rework the SPACE LEGACY homepage to follow the uploaded HTML visual reference and implement Phase 1 navigation, map-preview, timeline, quiz, and AI-ready sections.
